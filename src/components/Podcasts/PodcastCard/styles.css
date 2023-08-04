@@ -10,6 +10,8 @@
    padding: 0.5rem;
    opacity: 0.7;
    cursor: pointer;
+   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.9); /* You can adjust the values to customize the shadow */
+   
 }
 
 
@@ -29,4 +31,8 @@
   color: var(--white) !important;
   text-decoration: none !important;
   margin: 0.5rem 0rem;
+}
+
+.author{
+  color: rgb(174, 139, 207);
 }

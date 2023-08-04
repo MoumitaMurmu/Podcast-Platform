@@ -20,7 +20,10 @@ body {
 
 input{
   font-family: 'Inter', sans-serif;
+ 
 }
+
+
 
 a{
   text-decoration: none;
@@ -33,14 +36,17 @@ a{
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  margin-top: 4rem;
+  margin-top: 2rem;
+ 
 }
 
+
+
 .input-wrapper h1{
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   text-align: center;
-  font-weight: 300;
-  margin-bottom: 2rem;
+  font-weight: 500;
+ 
 }
 
 .podcasts-flex{
@@ -49,6 +55,22 @@ a{
   align-items: center;
   gap: 1.5rem;
   flex-wrap: wrap;
+  overflow-x: auto;
+}
+
+/* Add a fade-in animation for each podcast card */
+
+.podcasts-flex.slide-in {
+  animation: slideIn 5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%); /* Start the animation from left of the container */
+  }
+  to {
+    transform: translateX(0); /* Slide the container to its original position */
+  }
 }
 
 .podcast-title-heading{
@@ -83,3 +105,210 @@ a{
   text-align: left;
   width: 100%;
 }
+
+
+/* ProfilePage.css */
+
+.profile-container{
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: 100vh;
+  display: flex;
+  justify-content:flex-start;
+  flex-direction: row;
+  
+} 
+  
+
+  
+.profile-card {
+  align-content: space-between;
+  padding: 25px;
+ 
+  width: 180px;
+  background-color: #1e1d36;
+  position:relative;
+ 
+ height: 100vh;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.6); /* You can adjust the values to customize the shadow */
+} 
+
+
+
+
+.profile-details{
+  /* border: 1px solid white; */
+  padding: 5px;
+  margin: 0;
+  width: 160px;
+  text-align: center;
+  
+}
+
+.profile-card-menu-item{
+  text-align: left;
+ 
+}
+
+.menu-item{
+  background-color: var(--blue);
+  color: black;
+  width: 165px;
+  padding: 5px;
+  border-radius: 10px;
+
+}
+
+.menu-item span{
+  margin-bottom: 3px;
+  
+}
+
+.icon{
+  border-radius: 50%;
+  background-color: var(--theme);
+  position: relative;
+  padding: 5px;
+  top: 5.5px;
+  color: yellow;
+ 
+}
+
+.active .icon{
+  background-color:red !important;
+  color: var(--white);
+}
+
+.menu-item p:hover{
+background-color: rgb(32, 30, 30);
+  color: var(--white);
+  border-radius: 5px;
+  transition: all 0.3s;
+  padding: 2px;
+ 
+}
+.dashboard{
+  /* border-left: 1px solid var(--blue); */
+ 
+ height: 100vh;
+}
+
+.dashboard-items{
+ 
+  border-left: 1px solid var(--blue);
+ 
+}
+.dashboard-items h1{
+  text-align: left;
+  margin-left: 6rem;
+  font-weight: bold;
+  border-bottom: 1px solid #4594b2;
+  padding-bottom: 10px;
+ 
+}
+
+
+.user-icon {
+border: 2px solid var(--blue);
+border-radius: 50%;
+padding: 5px;
+height: 100px;
+width: 100px;
+margin: 15px;
+ 
+}
+
+.profile-contact-menu{
+  text-align: left;
+  border-top: 1px solid var(--blue);
+  margin-top: 10px;
+
+  width: 150px;
+  padding: 10px;
+}
+
+
+
+
+
+.profile-contact-menu h1 {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 10px;
+  color: var(--white);
+}
+
+.contact-link svg {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+}
+
+.contact-link span {
+  font-size: 16px;
+}
+
+.contact-link:hover {
+  color: #007bff;
+}
+
+
+
+
+
+
+
+.profile-reach {
+  margin-top: 20px;
+  width: 150px;
+  border-top: 1px solid var(--blue);
+
+  
+
+}
+
+.profile-reach h1{
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+}
+.profile-reach textarea {
+  width: 160px;
+  resize: vertical;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.feedback-btn{
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.feedback-btn:hover{
+  background-color: transparent;
+  color: var(--white)
+}
+/* Your other existing styles */
+
+.nopodcast{
+  margin-top: 5rem;
+  margin-left: 12rem;
+}
+
+
+
+

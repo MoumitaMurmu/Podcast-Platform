@@ -61,12 +61,20 @@ const[fullName, setFullName] = useState("");
         }
     }else{
         // throw an error
-        if(password!=confirmPassword){
-            toast.error("Please makes sure your password and confirm password matches!");
+        if (!fullName || !email || !password || !confirmPassword) {
+            toast.error("All fields are mandatory!");
+          }
+        else if(fullName.length <= 2){
+            toast.error("Full Name should be more than two characters!");
         }
         else if(password.length<6){
             toast.error("Password should be more than 6 characters!");
         }
+        else if(password!=confirmPassword){
+            toast.error("Please makes sure your password and confirm password matches!");
+        }
+       
+        
         setLoading(false);
     }
    
@@ -79,6 +87,7 @@ const[fullName, setFullName] = useState("");
     placeholder="full Name" 
     type="text" 
     required={true}
+    style={{ width: '200px !important' }}
     />
    
 
@@ -88,6 +97,7 @@ const[fullName, setFullName] = useState("");
     placeholder="Email" 
     type="text" 
     required={true}
+   
     />
 
 <InputComponent 
@@ -96,6 +106,7 @@ const[fullName, setFullName] = useState("");
     placeholder="Password" 
     type="password" 
     required={true}
+   
     />
 
 <InputComponent 
@@ -104,6 +115,7 @@ const[fullName, setFullName] = useState("");
     placeholder="Confirm Password" 
     type="password" 
     required={true}
+   
     />
 <Button text={loading ? "Loading...." :"Signup"} disabled={loading} onClick={handleSignup}/>
   
@@ -112,3 +124,7 @@ const[fullName, setFullName] = useState("");
 }
 
 export default SignupForm;
+
+
+     
+            

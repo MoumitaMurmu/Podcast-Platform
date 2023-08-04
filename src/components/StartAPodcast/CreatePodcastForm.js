@@ -8,6 +8,10 @@ import FileInput from '../common/Input/FileInput';
 import { storage, auth, db } from '../../firebase';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import { addDoc, collection, doc } from 'firebase/firestore';
+import cyp from '../../cyp.png';
+import womanE from '../../womanE.png';
+import { useEffect } from 'react';
+
 
 const CreatePodcastForm = () => {
     const[title, setTitle] = useState("");
@@ -17,6 +21,15 @@ const CreatePodcastForm = () => {
     const[loading, setLoading] = useState(false);
     const navigate = useNavigate();
     const dispatch = useDispatch();
+
+
+    const [showImages, setShowImages] = useState(false);
+
+  useEffect(() => {
+    // Trigger the animation after the component mounts
+    setShowImages(true);
+  }, []);
+
 
     const handleSubmit = async() => {
     //   toast.success("Handling Podcast Form");
@@ -83,7 +96,11 @@ const CreatePodcastForm = () => {
     }
 
   return (
-    <>
+    <div className='create-p-main'>
+            <div className='left-create'>
+              <img src={cyp} alt='cyp'className={showImages ? 'show' : ''} />
+            </div>
+            <div className='right-create'>
         <InputComponent 
     state={title} 
     setState={setTitle} 
@@ -105,6 +122,7 @@ const CreatePodcastForm = () => {
     id="display-image-input" 
     fileHandleFnc={displayImageHandle} 
     text={"Display Image Upload"}
+    
     />
 
     <FileInput 
@@ -115,8 +133,9 @@ const CreatePodcastForm = () => {
     />
 
 <Button text={loading ? "Loading...." :"Create Podcast"} disabled={loading} onClick={handleSubmit}/>
-
-    </>
+</div>
+<img src={womanE} alt='womanE' className='womanE' className={`womanE ${showImages ? 'show' : ''}`}/>
+    </div>
   )
 }
 

@@ -1,0 +1,97 @@
+ .landing-page{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+margin: 1rem;
+/* border: 1px solid white; */
+} 
+
+.left-landpage{
+    /* border: 1px solid white; */
+
+  width: 35vw;
+ 
+}
+.headphone{
+    position: relative;
+   right: 1.5rem;
+    bottom: 4rem;
+}
+
+.right-landpage{
+    /* border: 1px solid white; */
+    margin: 0;
+    
+    width: 30vw;
+   /* z-index: 100; */
+    
+}
+
+
+
+.end-right{
+    /* border: 1px solid white; */
+    width: 32vw;
+    margin-bottom: 1rem;
+}
+
+.end-right p{
+   padding-left: 15px;
+   font-size: 15px;
+   text-align:right;
+   
+}
+
+.signup-signin-heading{
+    border: 1px solid var(--grey);
+    border-radius: 50px;
+    padding: 5px;
+    width: 150px;
+    /* background-color: #8c8dcf; */
+    background-image: linear-gradient(to bottom, #5dfb68, #c4d622, #f4ac2e, #ff855b, #ef6e85, #e05d93, #c953a2, #a74fb1, #9b3abd, #8825cb, #6812dc, #0f09ee);
+    color: black;
+   
+}
+
+.create-p-main{
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: row;
+    width: 95vw;
+    margin: 0;
+    /* background-color: #fdc04f; */
+}
+
+
+
+.left-create img{
+    height: 470px;
+    
+}
+
+.right-create{
+    /* border: 1px solid white; */
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    margin-left: 9rem;
+    margin-top: 4rem;
+    padding-left: 0.5rem;
+    /* background-color: rgb(30 30 30); */
+    
+}
+
+.womanE{
+    width: 350px;
+    /* border: 1px solid white; */
+    /* background-color:#9391f3; */
+}
+
+.create-p-main img {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+  
+  .create-p-main img.show {
+    opacity: 1;
+  }
